@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- bagitahu browser ini adalah HTML5-->
+<html> <!-- bungkus semua-->
+
+<head> <!-- benda di belakang tabir-->
+    <meta charset="UTF-8"> <!-- kod bagi computer baca bahasa/ sokong huruf pelik atau emoji-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bagi komputer dia mobile friendly-->
+    <title>Online Booking</title><!-- tajuk kat tab browser-->
+</head>
+
+<div><!-- kotak generik (takde makna khas)-->
+
+    <body style="text-align: center"> <!-- tag untuk body--><!-- benda yang orang nampak kat screen-->
+        <fieldset style="width: 300px; height: 500px; margin: 0 auto;"> <!-- tag untuk fieldset-->
+            <style>
+                body {
+                    margin: 0;
+                    height: 100vh;
+                    /* setinggi screen*/
+                    display: flex;
+                    justify-content: center;
+                    /* tengah secara melintang*/
+                    align-items: center;
+                    /* tengah secara menegak*/
+                }
+            </style>
+            <h1>Sport Arena</h1> <!-- tag untuk tajuk besar-->
+            <h3>Please fill in the details below</h3> <!-- tag untuk tajuk kecil-->
+
+            <form action="proses.php" method="post"> <!-- tag untuk borang-->
+
+
+
+
+
+                <label for="name">First Name</label> <!-- label untuk input-->
+                <input type="text" id="name" name="name" placeholder="Please enter your name">
+                <!-- kotak untuk menaip-->
+                <br><!-- pindah baris-->
+                <label for="name">Last Name</label>
+                <input type="text" id="name" name="name" placeholder="Please enter your Last Name">
+                <br><br>
+                <label for="Facilities">Facilities</label>
+                <select id="Facilities" name="Facilities"> <!-- dropdown-->
+                    <optgroup label=" Indoor Court">
+                        <option value="">-</option>
+                        <option value="Court A">Court A</option>
+                        <option value="Court B">Court B</option>
+                        <option value="Court C">Court C</option>
+                        <option value="Court D">Court D</option>
+                    </optgroup>
+                    <optgroup label=" Outdoor Court">
+
+                        <option value="Basketball">Basketball</option>
+                        <option value="Tennis">Tennis</option>
+                        <option value="Football">Football</option>
+                        <option value="Hockey">Hockey</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label>Date</label>
+                <input type="date" name="calender" required><br>
+                <br><br>
+
+                <label>Time</label>
+                <input type="time" name="time" id="time">
+                <br><br>
+
+                <input type="submit" value="Finish"> <!-- button untuk hantar-->
+
+
+
+
+            </form> <!-- tag untuk borang-->
+
+            <nav> <!-- menu navigation-->
+                <ul> <!-- tag untuk senarai bullet tak bernombor-->
+
+                    <a href="homepage.html">Back</a> <!--tag untuk pergi ke page lain-->
+
+                </ul>
+            </nav>
+    </body>
+    </fieldset>
+</div>
+
+</html>
