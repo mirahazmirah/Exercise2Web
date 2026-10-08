@@ -1,109 +1,338 @@
-<!DOCTYPE html> <!-- bagitahu browser ini adalah HTML5-->
-<html> <!-- bungkus semua-->
+<!DOCTYPE html> <!-- bagitahu browser ini adalah HTML5 -->
+<html lang="en"> <!-- bungkus semua -->
 
-<head> <!-- benda di belakang tabir-->
-    <meta charset="UTF-8"> <!-- kod bagi computer baca bahasa/ sokong huruf pelik atau emoji-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bagi komputer dia mobile friendly-->
-    <title>Online Booking</title><!-- tajuk kat tab browser-->
+<head> <!-- benda di belakang tabir -->
+    <meta charset="UTF-8"> <!-- kod bagi computer baca bahasa / sokong huruf pelik atau emoji -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bagi komputer dia mobile friendly -->
+    <title>Sport Arena - Online Booking</title> <!-- tajuk kat tab browser -->
 </head>
 
-<div><!-- kotak generik (takde makna khas)-->
+<body bgcolor="#e2e8f0"> <!-- warna latar belakang halaman menggunakan atribut HTML -->
 
-    <body style="align-items: center;"> <!-- tag untuk body--><!-- benda yang orang nampak kat screen-->
-        <fieldset style="width: 600px; height: 600px; margin: 0 auto;"> <!-- tag untuk fieldset-->
-            <style>
-                body {
-                    margin: 0 auto;
-                    height: 100vh; 
-                    /* setinggi screen*/
-                    display: flex;
-                    justify-content: center;
-                    /* tengah secara melintang*/
-                    align-items: center;
-                    /* tengah secara menegak*/
-                }
-            </style>
-            <h1 style="color: #3607f2;">Sport Arena</h1> <!-- tag untuk tajuk besar-->
-            <h3>Please fill in the details below</h3> <!-- tag untuk tajuk kecil-->
+    <br><br> <!-- jarak dari atas skrin -->
 
-            <form action="proses.php" method="post"> <!-- tag untuk borang-->
-            <table width="120%"> <!-- tag untuk jadual-->
-                <tr> 
-                    <td> 
-                        <label for="name">First Name</label> <!-- label untuk input-->
-                        <br>
-                        <input type="text" id="name" name="name" placeholder="Please enter your name" size="26">
-                        <br></br>
-                    </td>
-            
-                    <td>
-                        <label>Date</label>
-                        <input type="date" name="calender" required><br>
-                    </td>
-                </tr>
+    <!-- Menyusun keseluruhan borang dalam jadual pusat dengan bingkai border berbilang -->
+    <table align="center" width="620" border="3" bordercolor="#1e40af" cellpadding="0" cellspacing="0"
+        bgcolor="#ffffff">
+        <tr>
+            <td>
+                <!-- Header Banner Berwarna -->
+                <table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#1e3a8a">
+                    <tr>
+                        <td align="center">
+                            <font face="Segoe UI, Arial, sans-serif" color="#ffffff" size="6">
+                                <b>UUM SPORT CENTRE</b>
+                            </font>
+                            <br>
+                            <font face="Segoe UI, Arial, sans-serif" color="#93c5fd" size="3">
+                                Online Facility Booking System
+                            </font>
+                        </td>
+                    </tr>
+                </table>
 
-                <tr>
-                    <td>
-                        <label for="name">Last Name</label>
-                        <br>
-                        <input type="text" id="name" name="name" placeholder="Please enter your Last Name" size="26">
-                        <br></br>
-                    </td>
+                <table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#ffffff">
+                    <tr>
+                        <td>
 
-                    <td>
-                        <label>Time</label>
-                        <input type="time" name="time" id="time" ><br>
-                    </td>
-                </tr>
+                            <!-- Borang Utama -->
+                            <form action="proses.php" method="post"> <!-- tag untuk borang -->
 
-                <tr>
-                    <td> 
-                        <label for="number">Contact Number</label>
-                        <br>
-                        <input type="tel" id="number" name="number" placeholder="Please enter your contact number" size="26">
-                    </td>
-                </tr>
-            </table>
+                                <!-- Section 1: Maklumat Pemohon -->
+                                <fieldset bgcolor="#f8fafc"> <!-- warna latar belakang fieldset -->
+                                    <legend>
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1e40af"><b>1. Personal Details
+                                            </b></font>
+                                    </legend>
+                                    <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="right" width="38%">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>First Name:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left" width="62%">
+                                                <input type="text" id="fname" name="fname"
+                                                    placeholder="Enter first name" size="26" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Last Name:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="text" id="lname" name="lname" placeholder="Enter last name"
+                                                    size="26" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Email Address:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="email" id="email" name="email"
+                                                    placeholder="example@email.com" size="26" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Phone Number:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="tel" id="phone" name="phone" placeholder="012-3456789"
+                                                    size="26" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Category:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="radio" id="cat_student" name="category" value="Student"
+                                                    checked>
+                                                <label for="cat_student">
+                                                    <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">
+                                                        Student</font>
+                                                </label> &nbsp;&nbsp;
+                                                <input type="radio" id="cat_public" name="category" value="Public">
+                                                <label for="cat_public">
+                                                    <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">
+                                                        Public</font>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
 
-            <br> 
-                <label for="Facilities">Facilities</label>
-                <br>
-                <select id="Facilities" name="Facilities"> <!-- dropdown-->
-                    <optgroup label=" Indoor Court">
-                        <option value="" selected disabled></option>
-                        <option value="Court A">Court A</option>
-                        <option value="Court B">Court B</option>
-                        <option value="Court C">Court C</option>
-                        <option value="Court D">Court D</option> 
-                    </optgroup>
-                    <optgroup label=" Outdoor Court"> 
+                                <br>
 
-                        <option value="Basketball">Basketball</option>
-                        <option value="Tennis">Tennis</option>
-                        <option value="Football">Football</option>
-                        <option value="Hockey">Hockey</option>
-                    </optgroup>
-                </select>
-                <br><br>
+                                <!-- Section 2: Butiran Tempahan -->
+                                <fieldset bgcolor="#f8fafc">
+                                    <legend>
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1e40af"><b> 2. Facility & Time
+                                                Selection </b></font>
+                                    </legend>
+                                    <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="right" width="38%">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Facility:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left" width="62%">
+                                                <select id="Facilities" name="Facilities" required>
+                                                    <option value="" disabled selected>-- Select Facility --</option>
+                                                    <optgroup label="Indoor Court">
+                                                        <option value="Court A">Court A (Badminton & Volleyball)
+                                                        </option>
+                                                        <option value="Court B">Court B (Badminton & Volleyball)
+                                                        </option>
+                                                        <option value="Court C">Court C (Futsal, Handball & Netball)
+                                                        </option>
+                                                        <option value="Court D">Court D (Sepak Takraw)</option>
+                                                    </optgroup>
+                                                    <optgroup label="Outdoor Court">
+                                                        <option value="Basketball">Basketball</option>
+                                                        <option value="Tennis">Tennis</option>
+                                                        <option value="Football">Football Field</option>
+                                                        <option value="Hockey">Hockey Pitch</option>
+                                                    </optgroup>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Booking Date:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="date" id="booking_date" name="calender" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Start Time:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="time" id="booking_time" name="time" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Duration (Hours):</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="number" id="duration" name="duration" min="1" max="6"
+                                                    value="1" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Estimated Players:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <input type="number" id="players" name="players" min="1" max="30"
+                                                    placeholder="1-30">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
 
-                <label for="quantity">Number of People</label>
-                <br>
-                <input type="number" id="quantity" name="quantity" min="1" max="15">
-                <br><br>
+                                <br>
 
-                <input type="submit" value="Finish"> <!-- button untuk hantar-->
+                                <!-- Section 3: Add-ons & Peralatan -->
+                                <fieldset bgcolor="#f8fafc">
+                                    <legend>
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1e40af"><b> 3. Equipment Rental
+                                                & Add-ons </b></font>
+                                    </legend>
+                                    <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td align="right" valign="top" width="38%">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Equipment Needed:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left" width="62%">
+                                                <input type="checkbox" id="eq_racket" name="equipment[]" value="Racket">
+                                                <label for="eq_racket">
+                                                    <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">
+                                                        Rackets / Bats</font>
+                                                </label><br>
+                                                <input type="checkbox" id="eq_ball" name="equipment[]" value="Balls">
+                                                <label for="eq_ball">
+                                                    <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">
+                                                        Balls / Shuttlecocks</font>
+                                                </label><br>
+                                                <input type="checkbox" id="eq_lights" name="equipment[]"
+                                                    value="Night Lighting">
+                                                <label for="eq_lights">
+                                                    <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">
+                                                        Night Floodlights</font>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" valign="top">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                    <b>Special Remarks:</b>
+                                                </font>
+                                            </td>
+                                            <td align="left">
+                                                <textarea id="remarks" name="remarks" rows="3" cols="28"
+                                                    placeholder="Optional requests or notes..."></textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
 
-            </form> <!-- tag untuk borang-->
+                                <br>
 
-            <nav> <!-- menu navigation-->
-                <ul> <!-- tag untuk senarai bullet tak bernombor-->
+                                <!-- Section 4: Pengesahan & Terma -->
+                                <fieldset bgcolor="#f8fafc">
+                                    <legend>
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1e40af"><b> 4. Terms &
+                                                Submission </b></font>
+                                    </legend>
+                                    <center>
+                                        <p>
+                                            <input type="checkbox" id="terms" name="terms" required>
+                                            <label for="terms">
+                                                <font face="Segoe UI, Arial, sans-serif" color="#0f172a" size="2">I
+                                                    agree to the Sport Arena rules and regulations.</font>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <button type="submit">
+                                                <font face="Segoe UI, Arial, sans-serif" size="3" color="#1e40af">
+                                                    <b>Finish Booking</b>
+                                                </font>
+                                            </button> &nbsp;&nbsp;
+                                            <button type="reset">
+                                                <font face="Segoe UI, Arial, sans-serif" size="3" color="#991b1b">
+                                                    <b>Reset Form</b>
+                                                </font>
+                                            </button>
+                                        </p>
+                                    </center>
+                                </fieldset>
 
-                    <a href="index.html">Back</a> <!--tag untuk pergi ke page lain-->
+                            </form>
 
-                </ul>
-            </nav>
-    </body>
-        </fieldset>
-</div>
+                            <br>
+
+                            <!-- Informasi Tambahan (Details & Summary) -->
+                            <fieldset bgcolor="#eff6ff">
+                                <legend>
+                                    <font face="Segoe UI, Arial, sans-serif" color="#1d4ed8"><b>Important Information
+                                        </b></font>
+                                </legend>
+                                <details>
+                                    <summary>
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1d4ed8"><b>Click here to view
+                                                Booking Rules & Guidelines</b></font>
+                                    </summary>
+                                    <ul>
+                                        <li>
+                                            <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">Please
+                                                arrive 15 minutes before your booked time slot.</font>
+                                        </li>
+                                        <li>
+                                            <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">Proper
+                                                sports attire and non-marking shoes are required.</font>
+                                        </li>
+                                        <li>
+                                            <font face="Segoe UI, Arial, sans-serif" color="#334155" size="2">
+                                                Cancellations must be made at least 24 hours in advance.</font>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </fieldset>
+
+                            <br>
+                            <hr color="#cbd5e1" width="95%">
+
+                            <center>
+                                <nav> <!-- menu navigation -->
+                                    <a href="homepage.html">
+                                        <font face="Segoe UI, Arial, sans-serif" color="#1d4ed8" size="3"><b>&laquo;
+                                                Back to Homepage</b></font>
+                                    </a>
+                                </nav>
+
+                                <br>
+                                <footer>
+                                    <font face="Segoe UI, Arial, sans-serif" color="#64748b" size="2">
+                                        &copy; 2026 Sport Arena Booking System. All rights reserved.
+                                    </font>
+                                </footer>
+                            </center>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+</body>
 
 </html>
