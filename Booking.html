@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!-- bagitahu browser ini adalah HTML5-->
+<html> <!-- bungkus semua-->
+
+<head> <!-- benda di belakang tabir-->
+    <meta charset="UTF-8"> <!-- kod bagi computer baca bahasa/ sokong huruf pelik atau emoji-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- bagi komputer dia mobile friendly-->
+    <title>Online Booking</title><!-- tajuk kat tab browser-->
+</head>
+
+<div><!-- kotak generik (takde makna khas)-->
+
+    <body style="align-items: center;"> <!-- tag untuk body--><!-- benda yang orang nampak kat screen-->
+        <fieldset style="width: 600px; height: 600px; margin: 0 auto;"> <!-- tag untuk fieldset-->
+            <style>
+                body {
+                    margin: 0 auto;
+                    height: 100vh; 
+                    /* setinggi screen*/
+                    display: flex;
+                    justify-content: center;
+                    /* tengah secara melintang*/
+                    align-items: center;
+                    /* tengah secara menegak*/
+                }
+            </style>
+            <h1 style="color: #3607f2;">Sport Arena</h1> <!-- tag untuk tajuk besar-->
+            <h3>Please fill in the details below</h3> <!-- tag untuk tajuk kecil-->
+
+            <form action="proses.php" method="post"> <!-- tag untuk borang-->
+            <table width="120%"> <!-- tag untuk jadual-->
+                <tr> 
+                    <td> 
+                        <label for="name">First Name</label> <!-- label untuk input-->
+                        <br>
+                        <input type="text" id="name" name="name" placeholder="Please enter your name" size="26">
+                        <br></br>
+                    </td>
+            
+                    <td>
+                        <label>Date</label>
+                        <input type="date" name="calender" required><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="name">Last Name</label>
+                        <br>
+                        <input type="text" id="name" name="name" placeholder="Please enter your Last Name" size="26">
+                        <br></br>
+                    </td>
+
+                    <td>
+                        <label>Time</label>
+                        <input type="time" name="time" id="time" ><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> 
+                        <label for="number">Contact Number</label>
+                        <br>
+                        <input type="tel" id="number" name="number" placeholder="Please enter your contact number" size="26">
+                    </td>
+                </tr>
+            </table>
+
+            <br> 
+                <label for="Facilities">Facilities</label>
+                <br>
+                <select id="Facilities" name="Facilities"> <!-- dropdown-->
+                    <optgroup label=" Indoor Court">
+                        <option value="" selected disabled></option>
+                        <option value="Court A">Court A</option>
+                        <option value="Court B">Court B</option>
+                        <option value="Court C">Court C</option>
+                        <option value="Court D">Court D</option> 
+                    </optgroup>
+                    <optgroup label=" Outdoor Court"> 
+
+                        <option value="Basketball">Basketball</option>
+                        <option value="Tennis">Tennis</option>
+                        <option value="Football">Football</option>
+                        <option value="Hockey">Hockey</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label for="quantity">Number of People</label>
+                <br>
+                <input type="number" id="quantity" name="quantity" min="1" max="15">
+                <br><br>
+
+                <input type="submit" value="Finish"> <!-- button untuk hantar-->
+
+            </form> <!-- tag untuk borang-->
+
+            <nav> <!-- menu navigation-->
+                <ul> <!-- tag untuk senarai bullet tak bernombor-->
+
+                    <a href="index.html">Back</a> <!--tag untuk pergi ke page lain-->
+
+                </ul>
+            </nav>
+    </body>
+        </fieldset>
+</div>
+
+</html>
